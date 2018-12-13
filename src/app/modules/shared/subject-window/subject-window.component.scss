@@ -1,0 +1,10 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 70px);
+  grid-template-rows: repeat(auto-fill, 70px);
+  align-items: center;
+  justify-items: center;
+  align-content: space-between;
+  justify-content: space-around;
+  overflow: hidden;
+}

@@ -1,0 +1,4 @@
+<div class="container" [style.width.px]="screenWidth" [style.height.px]="screenHeight">
+  <gk-tile *ngFor="let tile of tiles" (click)="tile.selected=!tile.selected" [class.selected]="tile.selected" [w]="tile?.width"
+    [h]="tile?.height" [xPosition]="tile.x" [yPosition]="tile.y"></gk-tile>
+</div>
