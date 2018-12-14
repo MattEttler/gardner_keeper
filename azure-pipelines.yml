@@ -35,4 +35,4 @@ steps:
   displayName: "Publish artifacts"
   inputs:
     artifactName: 'app'
-    targetPath: '$(Build.ArtifactStagingDirectory)/app'
+    targetPath: '/dist'
