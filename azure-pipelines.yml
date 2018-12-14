@@ -20,3 +20,19 @@ steps:
     npm install
     ng build --prod
   displayName: 'npm install and build'
+
+ # copy output to build artifacts
+
+- task: CopyFiles@2
+  displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)/app'
+  inputs:
+    SourceFolder: 'wwwroot' # edit this to your needs
+    TargetFolder: '$(Build.ArtifactStagingDirectory)/app'
+
+# publish build artifacts
+
+- task: PublishPipelineArtifact@0
+  displayName: "Publish artifacts"
+  inputs:
+    artifactName: 'app'
+    targetPath: '$(Build.ArtifactStagingDirectory)/app'
