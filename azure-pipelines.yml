@@ -26,7 +26,7 @@ steps:
 - task: CopyFiles@2
   displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)/app'
   inputs:
-    SourceFolder: 'wwwroot' # edit this to your needs
+    SourceFolder: 'dist' # edit this to your needs
     TargetFolder: '$(Build.ArtifactStagingDirectory)/app'
 
 # publish build artifacts
@@ -35,4 +35,4 @@ steps:
   displayName: "Publish artifacts"
   inputs:
     artifactName: 'app'
-    targetPath: '/dist'
+    targetPath: '$(Build.ArtifactStagingDirectory)/app'
