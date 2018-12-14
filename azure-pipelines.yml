@@ -36,3 +36,9 @@ steps:
   inputs:
     artifactName: 'app'
     targetPath: '$(Build.ArtifactStagingDirectory)/app'
+
+- task: CmdLine@1
+  displayName: 'Publish artifact to Cloud Storage'
+  inputs:
+    filename: gsutil
+    arguments: 'cp $(Build.ArtifactStagingDirectory)/app gs://train.soma.farm'
