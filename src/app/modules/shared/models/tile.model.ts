@@ -10,10 +10,3 @@ interface BaseTile {
     position: {};
 
 }
-
-interface Tag {
-    x: number;
-    y: number;
-    width: number;
-    height: number;
-}
