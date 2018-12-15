@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { SharedModule } from './modules/shared/shared.module';
+import { PepNoPepModule } from './modules/pep-no-pep/pep-no-pep.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { SharedModule } from './modules/shared/shared.module';
   ],
   imports: [
     BrowserModule,
-    SharedModule
+    SharedModule,
+    PepNoPepModule
   ],
   providers: [],
   bootstrap: [AppComponent]
