@@ -1,4 +1,8 @@
 <div class='container'>
-  <div class="action-bar">SCORE?</div>
-  <img [src]="subject?.subjectId" (click)="getClick($event);">
+  <div class="img-container" #containerEl>
+    <img class="subject" #subjectEl [style.left.%]="xoffset" [style.bottom.%]="yoffset" [src]="subject?.subjectId"
+      (click)="tagSubject($event);" (load)="getVisibleImgSection()">
+  </div>
+  <div class="action-bar"><button class="no-pepper" (click)="newSubject()">NO PEPPER</button><button class="pepper"
+      (click)="tagSubject()">PEPPER</button></div>
 </div>
