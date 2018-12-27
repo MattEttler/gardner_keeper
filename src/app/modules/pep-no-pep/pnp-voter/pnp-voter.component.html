@@ -1,8 +1,8 @@
 <div class='container'>
   <div class="img-container" #containerEl>
-    <img class="subject" #subjectEl [style.left.%]="xoffset" [style.bottom.%]="yoffset" [src]="subject?.subjectId"
-      (click)="tagSubject($event);" (load)="getVisibleImgSection()">
+    <img class="subject" #subjectEl [class.loading]="loading" [style.left.%]="xoffset" [style.bottom.%]="yoffset" [src]="subject?.subjectId"
+      (click)="tagSubject($event);" (load)="resetView()">
   </div>
-  <div class="action-bar"><button class="no-pepper" (click)="newSubject()">NO PEPPER</button><button class="pepper"
-      (click)="tagSubject()">PEPPER</button></div>
+  <div class="action-bar"><button class="gk-button red" (click)="newSubject()" [disabled]="!!loading">NOT PEPPER</button>
+    <button class="gk-button green" (click)="tagSubject()" [disabled]="!!loading">PEPPER</button></div>
 </div>
