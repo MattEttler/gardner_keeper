@@ -21,20 +21,6 @@
   button {
     width: 50%;
     height: 100%;
-    border: none;
-    transition: opacity .3s;
-
-    &:active {
-      opacity: .8;
-    }
-  }
-
-  .pepper {
-    background-color: rgb(76, 151, 76);
-  }
-
-  .no-pepper {
-    background-color: rgb(153, 74, 74);
   }
 }
 
@@ -49,5 +35,13 @@
   img {
     position: relative;
     z-index: -1;
+  }
+}
+
+.subject {
+  transition: all .15s;
+
+  &.loading {
+    opacity: 0;
   }
 }
