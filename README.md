@@ -1,4 +1,5 @@
 # GardnerKeeper
+![build status](https://codebuild.us-east-2.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiTmtFKzdsNUNLOFM0Umo0M2pnODNwQXh1aDcweDRLYVR1dDc3QXhGa28xZTlXdG5GbFFsb2JDWTlmdmxQaEcrZmU2aXFHYlY5cklHZFlqR1UyNlhOc1MwPSIsIml2UGFyYW1ldGVyU3BlYyI6ImxUMkRmc25BTFRTYm1UTjUiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
