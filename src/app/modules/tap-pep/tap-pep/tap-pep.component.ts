@@ -4,9 +4,9 @@ import { Subject } from 'src/app/core/models/subject.model';
 import { flatMap, switchMap } from 'rxjs/operators';
 
 @Component({
-  selector: 'gk-pnp-voter',
-  templateUrl: './pnp-voter.component.html',
-  styleUrls: ['./pnp-voter.component.scss']
+  selector: 'gk-tap-pep',
+  templateUrl: './tap-pep.component.html',
+  styleUrls: ['./tap-pep.component.scss']
 })
 export class TapPepComponent implements OnInit {
   public subject: Subject;
