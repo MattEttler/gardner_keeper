@@ -14,6 +14,7 @@ export class PnpVoterComponent implements OnInit, AfterViewInit {
   public yoffset: number;
   public visibleSubjectCoordinates: Rect;
   public viewPort: Rect;
+  public loading: boolean;
   @ViewChild('subjectEl') subjectEl: ElementRef;
   @ViewChild('containerEl') containerEl: ElementRef;
   constructor(private _subjectService: SubjectService) { }
@@ -37,14 +38,16 @@ export class PnpVoterComponent implements OnInit, AfterViewInit {
   }
 
   newSubject() {
+    this.loading = true;
     this._subjectService.getRandomSubject()
       .subscribe(subject => {
         this.subject = subject;
-        this.offsetSubject();
       });
   }
 
-  getVisibleImgSection() {
+  resetView() {
+    this.offsetSubject();
+
     const subjectRect: Rect = {
       top: this.subjectEl.nativeElement.offsetTop,
       bottom: this.subjectEl.nativeElement.offsetTop + this.subjectEl.nativeElement.offsetHeight,
@@ -58,6 +61,8 @@ export class PnpVoterComponent implements OnInit, AfterViewInit {
       left: Math.max(this.viewPort.left, subjectRect.left) - subjectRect.left,
       right: Math.min(this.viewPort.right, subjectRect.right) - subjectRect.left
     };
+
+    this.loading = false;
   }
 
   tagSubject() {
