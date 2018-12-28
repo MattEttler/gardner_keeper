@@ -1,1 +1,6 @@
-<gk-pnp-voter></gk-pnp-voter>
+<gk-menu *ngIf="currentMode==undefined"></gk-menu>
+<button *ngIf="currentMode!=undefined" class="gk-button blue back-button" (click)="modeService.changeMode(undefined)">&#8592;</button>
+
+<gk-pnp-voter *ngIf="currentMode==ANNOTATION_MODES.PEPPER_NOT_PEPPER"></gk-pnp-voter>
+<gk-subject-window *ngIf="currentMode==ANNOTATION_MODES.PEPPER_TILES"></gk-subject-window>
+<gk-tap-pep *ngIf="currentMode==ANNOTATION_MODES.PEPPER_TAPPER"></gk-tap-pep>
