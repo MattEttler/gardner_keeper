@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SubjectService } from 'src/app/core/subject.service';
 import { Subject } from 'src/app/core/models/subject.model';
-import { flatMap, switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'gk-tap-pep',

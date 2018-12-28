@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { SharedModule } from './modules/shared/shared.module';
 import { PepNoPepModule } from './modules/pep-no-pep/pep-no-pep.module';
+import { TapPepModule } from './modules/tap-pep/tap-pep.module';
+import { MenuModule } from './modules/menu/menu.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +14,9 @@ import { PepNoPepModule } from './modules/pep-no-pep/pep-no-pep.module';
   imports: [
     BrowserModule,
     SharedModule,
-    PepNoPepModule
+    PepNoPepModule,
+    TapPepModule,
+    MenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

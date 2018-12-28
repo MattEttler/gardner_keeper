@@ -6,6 +6,7 @@ import { TapPepComponent } from './tap-pep/tap-pep.component';
   imports: [
     CommonModule
   ],
-  declarations: [TapPepComponent]
+  declarations: [TapPepComponent],
+  exports: [TapPepComponent]
 })
 export class TapPepModule { }
